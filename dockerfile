@@ -20,7 +20,9 @@ COPY code/ui.R /ui.R
 COPY code/deploy.R /deploy.R
 
 # After all the necessary files have been copied, run the deploy.R script to start the deployment of the Shiny app
-CMD Rscript deploy.R
+EXPOSE 3838
+
+CMD ["R","-e", "shiny::runApp(host='0.0.0.0', port = 3838)"]
 
 
 # To test the Docker image, you can run the following commands:
