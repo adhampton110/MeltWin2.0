@@ -56,4 +56,4 @@ jobs:
           SECRET: ${{ secrets.SECRET }}
         run: >
           cd code
-          Rscript code/deploy.R
+          Rscript deploy.R
