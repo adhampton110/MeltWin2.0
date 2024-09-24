@@ -54,7 +54,7 @@ jobs:
       
       - name: Authorize & Deploy Application
         env:
-          SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }
+          SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }}
           TOKEN: ${{ secrets.TOKEN }}
           SECRET: ${{ secrets.SECRET }}
         run: Rscript code/deploy.R
