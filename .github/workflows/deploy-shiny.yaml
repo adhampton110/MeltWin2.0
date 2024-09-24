@@ -45,14 +45,16 @@ jobs:
       #     use-public-rspm: true
       
       - name: Output ENV
-        env:
-          SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }}
+        
         run: env
 
-      # - name: Install rsconnect
-      #   run: install.packages("rsconnect")
-      #   shell: Rscript {0} 
+      - name: Install rsconnect
+        run: install.packages("rsconnect")
+        shell: Rscript {0} 
       
-      # - name: Authorize & Deploy Application 
-      #   run: >
-      #     Rscript code/deploy.R
+      - name: Authorize & Deploy Application
+        env:
+          SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }
+          TOKEN: ${{ secrets.TOKEN }}
+          SECRET: ${{ secrets.SECRET }}
+        run: Rscript code/deploy.R
