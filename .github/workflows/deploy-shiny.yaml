@@ -49,9 +49,5 @@ jobs:
         shell: Rscript {0} 
       
       - name: Authorize & Deploy Application 
-        env:
-          SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }}
-
         run: >
-          Rscript -e code/deploy.R
-        shell: Rscript {0}
+          Rscript code/deploy.R
