@@ -46,7 +46,7 @@ jobs:
           r-version: 4.2.1
     
       - name: Install rsconnect
-        run: install.packages(c("shiny","rsconnect"))
+        run: install.packages(c("shiny","rsconnect","dplyr"))
         shell: Rscript {0} 
       
       - name: Authorize & Deploy Application
