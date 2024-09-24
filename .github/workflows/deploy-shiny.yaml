@@ -54,4 +54,6 @@ jobs:
           SHINY_ACC_NAME: ${{ secrets.SHINY_ACC_NAME }}
           TOKEN: ${{ secrets.TOKEN }}
           SECRET: ${{ secrets.SECRET }}
-        run: Rscript code/deploy.R
+        run: >
+          cd code
+          Rscript code/deploy.R
