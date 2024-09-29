@@ -55,5 +55,4 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           SECRET: ${{ secrets.SECRET }}
         run: |
-          cd code
-          Rscript deploy.R
+          rsconnect::setAccountInfo("${{ secrets.SHINY_ACC_NAME }}", "${{ secrets.TOKEN }}", "${{ secrets.SECRET }}")
