@@ -56,3 +56,4 @@ jobs:
           SECRET: ${{ secrets.SECRET }}
         run: |
           rsconnect::setAccountInfo("${{ secrets.SHINY_ACC_NAME }}", "${{ secrets.TOKEN }}", "${{ secrets.SECRET }}")
+        shell: Rscript {0}
