@@ -55,7 +55,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           SECRET: ${{ secrets.SECRET }}
         run: |
-          cd code
           rsconnect::setAccountInfo("${{ secrets.SHINY_ACC_NAME }}", "${{ secrets.TOKEN }}", "${{ secrets.SECRET }}")
-          rsconnect::deployApp(appName = "MeltShiny", appPrimaryDoc = "app.R", forceUpdate = "TRUE")
+          rsconnect::deployApp(appName = "MeltShiny", appPrimaryDoc = "code/app.R", forceUpdate = "TRUE")
         shell: Rscript {0}
