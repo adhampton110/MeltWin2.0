@@ -1,4 +1,6 @@
 .DS_Store
 code/Rplots.pdf
+.RData
+.Rhistory
 
 .Rproj.user

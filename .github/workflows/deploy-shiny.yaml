@@ -48,9 +48,6 @@ jobs:
       - name: Install Application Dependencies
         run: install.packages(c("shiny","rsconnect"))
         shell: Rscript {0} 
-
-      # - name: Install Application Dependencies
-      #   run: Rscript code/install.R
       
       - name: Authorize & Deploy Application
         env:
