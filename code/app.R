@@ -1,5 +1,6 @@
 # Load libraries and run application
-suppressWarnings(suppressMessages(library(dplyr)))
+#suppressWarnings(suppressMessages(library(dplyr)
+library(dplyr)
 library(DT,warn.conflicts=FALSE)
 library(ggplot2,warn.conflicts=FALSE)
 library(glue,warn.conflicts=FALSE)
